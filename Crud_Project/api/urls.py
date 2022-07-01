@@ -19,5 +19,7 @@ from api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home',views.ApiConfig,name="api_config"),
+    path('home',views.ApiConfig,name="api_config"), #basic response
+    path('task-list/',views.TaskList,name="task-list"),  #list all the tasks
+    path('task_detail/<str:pk>',views.TaskDetail,name="task-detail"), #to view detail of single task by specifying pk
 ]
