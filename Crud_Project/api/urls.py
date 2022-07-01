@@ -22,4 +22,7 @@ urlpatterns = [
     path('home',views.ApiConfig,name="api_config"), #basic response
     path('task-list/',views.TaskList,name="task-list"),  #list all the tasks
     path('task_detail/<str:pk>',views.TaskDetail,name="task-detail"), #to view detail of single task by specifying pk
+    path('create-task/',views.CreateTask,name="create-task"), #create task
+    path('task-update/<str:pk>',views.TaskUpdate,name="task-update"),
+    path('task-delete/<int:id>',views.DeleteTask,name="delete-task"),
 ]
